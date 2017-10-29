@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <meta charset="utf-8">
+        <title>ImagoPedia</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="/bootstrap.css" rel="stylesheet">
+        <link href="/facebook.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        
+        <div class="wrapper">
+			<div class="box">
+				<div class="row row-offcanvas row-offcanvas-left">
+					
+					<div class="column col-lg-12 col-sm-12 col-xs-12" id="main">
+						<div>
+							<nav class="navbar navbar-inverse navbar-fixed-top">
+								<div class="container">
+									<div class="navbar-header">
+										<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+									        <span class="sr-only">Toggle navigation</span>
+									        <span class="icon-bar"></span>
+									        <span class="icon-bar"></span>
+									        <span class="icon-bar"></span>
+									    </button>
+										<a href="#" class="navbar-brand">
+										<span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+										ImagoPedia</a>
+									</div>
+								</div>
+							</nav>
+
+							<div class="full col-lg-9 col-sm-9">
+							  
+								<div class="row">
+								  
+								    <div class="col-lg-5 col-sm-5">
+									  	<div class="panel panel-default">
+											<div class="panel-thumbnail" >
+												<center><img src="assets/img/bg_5.jpg" id="display_image" class="img-responsive">
+												</center> 
+											</div>
+											<div class="panel-body">
+												<center><p class="lead">Your screenshot query</p></center>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4><img src="twitter.png"/>  Tweets</h4>
+											</div>
+											<div class="panel-body">
+												<div class="clearfix"></div>
+													<% if(twitter && twitter.tweets){
+														twitter.tweets.forEach( function(row) { %>
+														<a href="<%= row.url %> " class="list-group-item"> <%= row.title %> </a>
+													<% }); }
+													else {%>
+														<p> No tweets to show. </p>
+													<% } %>
+												<hr>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+									  		<div class="panel-heading">
+												<h4><img src="users.png"/>  Twitter Profiles</h4>
+											</div>
+										    <div class="panel-body">
+												<div class="clearfix"></div>
+													<% if(twitter && twitter.profiles){
+														twitter.profiles.forEach( function(row) { %>
+														<a href="<%= row.url %> " class="list-group-item"> <%= row.title %> </a>
+													<% }); }
+													else {%>
+														<p> No twitter profiles to show. </p>
+													<% } %>
+											</div>
+										</div>
+								   
+									    <div class="panel panel-default">
+											<div class="panel-heading">
+												<h4><img src="youtube.png"/>  Videos</h4>
+											</div>
+											<div class="panel-body">
+												<div class="clearfix"></div>
+													<% if(youtube){
+														youtube.forEach( function(row) { %>
+														<a href="<%= row.url %> " class="list-group-item"> <%= row.title %> </a>
+													<% }); }
+													else {%>
+														<p> No videos to show. </p>
+													<% } %>
+											</div>
+										  </div>
+										</div>
+
+									
+
+								  	<div class="col-lg-7 col-sm-7">
+									  
+										<div class="panel panel-default">
+											<div class="panel-heading"> 
+											    <h4><img src="search.png"/>  Search Results</h4>
+											</div>
+											<div class="panel-body">
+												<div class="list-group">
+													<% if(google){
+															google.forEach( function(row) { %>
+												  		<a href="<%= row.url %> " class="list-group-item"> <%= row.title %> </a>
+												  	<% } ); }
+												  	else {%>
+														<p> No search results to show. </p>
+													<% } %>
+												</div>
+											</div>
+									    </div>
+								   
+								   
+									  	<div class="panel panel-default">
+										 	<div class="panel-heading">	 
+										 		<h4><img src="ebay.png"/>  E-Commerce Results</h4>
+										 	</div>
+										  	<div class="panel-body">
+												<div class="list-group">
+											    	<% if(ebay){
+											    		ebay.forEach( function(row) { %>
+											  			<a href="<%= row.url %> " class="list-group-item"> <%= row.title %> </a>
+											  		<% } ); } 
+											  		else {%>
+														<p> No purchasable items to show. </p>
+													<% } %>
+												</div>
+										  	</div>
+									  	</div>
+								  	</div>
+								  
+							   	</div>
+							  
+								<div class="row" id="footer">
+								  <div class="col-sm-6">
+									<p>
+									<a href="#" class="pull-right"> &copy; Copyright &nbsp; &nbsp; @Rashke-Qamar</a>
+									</p>
+								  </div>
+								</div>
+							  
+							<hr>
+							 
+						</div>
+					</div>
+				</div>
+				  
+			</div>
+		</div>
+        </div>
+        <script type="text/javascript" src="/jquery.js"></script>
+        <script type="text/javascript" src="/bootstrap.js"></script>
+        <!--<script type="text/javascript">
+	        $(document).ready(function() {
+				$('[data-toggle=offcanvas]').click(function() {
+					$(this).toggleClass('visible-xs text-center');
+					$(this).find('i').toggleClass('glyphicon-chevron-right glyphicon-chevron-left');
+					$('.row-offcanvas').toggleClass('active');
+					$('#lg-menu').toggleClass('hidden-xs').toggleClass('visible-xs');
+					$('#xs-menu').toggleClass('visible-xs').toggleClass('hidden-xs');
+					$('#btnShow').toggle();
+				});
+	        });
+        </script>-->
+</body></html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Search Results</h2>
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Google Results</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">
+        	<ul>
+        	<% google.forEach( function(res){ %>
+        		<li> <a href="<%= res.url %>"> <%= res.title %> </a> </li>
+        	<% } ); %>
+        	</ul>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Ebay Results</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">
+        	<ul>
+        	<% ebay.forEach( function(res){ %>
+        		<li> <a href="<%= res.url %>"> <%= res.title %> </a> </li>
+        	<% } ); %>
+        	</ul>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Twitter Results</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">
+        	<% if( twitter.tweets ) { twitter.tweets.forEach( function(res){ %>
+	        <ul>
+	        	<li> <a href="<%= res.url %>"> <%= res.title %> </a> </li>
+	        <% } ); } %>
+        	</ul>
+        	<% if( twitter.users ) { twitter.users.forEach( function(res){ %>
+        	<ul>
+	        	<li> <a href="<%= res.url %>"> <%= res.title %> </a> </li>
+	        <% } ); } %>
+        	</ul>	
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+    
+</body>
+</html>
