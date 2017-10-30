@@ -1,7 +1,7 @@
 {
-  "name": "Test Screenshot Extension",
+  "name": "Imagopedia",
   "version": "1.3",
-  "description": "Demonstrate screenshot functionality in the chrome.tabs api.",
+  "description": "Clip an image and get a detailed analysis about it.",
   "background": {
     "persistent": false,
     "scripts": ["background.js"]
