@@ -3,7 +3,7 @@ module.exports = function( response123 ) {
 	var fs = require('fs');
 	var VisualRecognitionV3 = require('watson-developer-cloud/visual-recognition/v3');
 	var visual_recognition = new VisualRecognitionV3({
-	api_key: '985900d237feb4fe7dc3fff58b3ace4bf5db1340',
+	api_key: '<Your IBM Watson API KEY>',
 	version_date: VisualRecognitionV3.VERSION_DATE_2016_05_20
 	});
 
@@ -135,7 +135,7 @@ module.exports = function( response123 ) {
 		        ebay.xmlRequest({
 		            serviceName: 'Finding',
 		            opType: 'findItemsByKeywords',
-		            appId: 'AvishekS-clippy-PRD-15d705b3d-a64f967f',      
+		            appId: '<Your ebay appId>',      
 		            params: params,
 		            parser: ebay.parseResponseJson 
 		        },
@@ -180,7 +180,7 @@ module.exports = function( response123 ) {
 						var search = require('youtube-search');
 						var opts = {
 							maxResults: 5,
-							key: 'AIzaSyCGD85YAKBaNX-XxqPAlSNqF1Bxsiddl9I	'
+							key: '<Your youtube data API key>'
 						}; 
 						search( tag , opts, function(err, results) {
 							if(err) 
