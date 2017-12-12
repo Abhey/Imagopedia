@@ -26,15 +26,15 @@ Imagopedia allows user to either upload image for search or clip image on curren
 <h1>How to Use</h1>
 <ul>  
    <li>Open browser and now click on chrome extension icon at any point</li>
-   <li>Clip the portion you want to search on the new tab<li> 
-  <li>Perform Imagopedia Search</li> 
+   <li>Clip the portion you want to search on the new tab</li> 
+   <li>Perform Imagopedia Search</li> 
 </ul>
 
 <h1>Contribute</h1>
 <ul>
   <li>Feel free to report issues and bugs.It will be helpful for future launches of application.</li>
-<li>All Suggestions are welcome.</li>
-<li>Fork repository and Contribute.</li>
+  <li>All Suggestions are welcome.</li>
+  <li>Fork repository and Contribute.</li>
 </ul>
 
 <h1>Contributors</h1>
